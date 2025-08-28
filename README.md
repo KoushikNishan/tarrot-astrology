@@ -1,0 +1,2 @@
+# tarrot-astrology
+barua project
