@@ -172,13 +172,8 @@
         display: block;
       }
     }
-
-
-
-
-
-
- .small-box {
+    /* notice.......gggggggggggggggggggggggggggggggggggggg*/
+       .small-box {
       width: 150px;     /* wider */
       height: 25px;     /* shorter height */
       background: linear-gradient(45deg, #ff0066, #ffcc00, #33ccff, #ff33cc);
@@ -325,11 +320,8 @@
       cursor: pointer;
       text-shadow: 0 0 10px #fff, 0 0 20px #ff33cc;
     }
+    /*eeeeeeeeeeeeeeeeeeeeeeeeennnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnddddddddddddddddddddddddddddd*/
 
-
-
-
-    
   </style>
 </head>
 <body>
@@ -343,13 +335,17 @@
       <a href="#contact">Contact</a>
     </nav>
   </header>
-<!-- notice board-->
 
 
 
 
 
-  
+
+
+
+
+
+
   <!-- Banner -->
   <section class="banner" id="home">
     <img src="slide.1" class="active" alt="Astrology Banner">
@@ -357,11 +353,8 @@
     <img src="slide.3.jpg" alt="Prediction Banner">
     <div class="banner-text">Discover Your Destiny with Tarot & Astrology</div>
   </section>
-
-
-
-
- <div class="small-box" id="openNotice">⚡ NOTICE ⚡</div>
+<!--review from -->
+  <div class="small-box" id="openNotice">⚡ NOTICE ⚡</div>
 
   <div class="overlay" id="overlay">
     <div class="notice-box">
@@ -380,14 +373,6 @@
     <img id="modalImage" src="" alt="Expanded Notice Image">
   </div>
 
-
-
-
-
-
-
-
-  
   <!-- About -->
   <section id="about" style="padding:40px 20px; text-align:center;">
     <h2>About Us</h2>
@@ -529,7 +514,7 @@
   <section id="contact" style="padding:40px 20px; text-align:center;">
     <h2>Contact Us</h2>
     <p>Email: nkoushik910@gmail.com</p>
-    <p>Phone: +91 8170871986 or 6296236346</p>
+    <p>Phone: +91 8170871986</p>
     <h1>CONTACT FOR BOOKING</h1>
   </section>
 
@@ -610,7 +595,51 @@
       document.getElementById('bookingModal').style.display = 'none';
     }
   </script>
+
+
+<script>
+    const openBtn = document.getElementById("openNotice");
+    const overlay = document.getElementById("overlay");
+    const closeBtn = document.getElementById("closeNotice");
+    const noticeImage = document.getElementById("noticeImage");
+    const imageModal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage");
+    const closeImage = document.getElementById("closeImage");
+
+    openBtn.addEventListener("click", () => {
+      overlay.style.display = "flex";
+    });
+
+    closeBtn.addEventListener("click", () => {
+      overlay.style.display = "none";
+    });
+
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) {
+        overlay.style.display = "none";
+      }
+    });
+
+    noticeImage.addEventListener("click", () => {
+      modalImage.src = noticeImage.src;
+      imageModal.style.display = "flex";
+    });
+
+    closeImage.addEventListener("click", () => {
+      imageModal.style.display = "none";
+    });
+
+    imageModal.addEventListener("click", (e) => {
+      if (e.target === imageModal) {
+        imageModal.style.display = "none";
+      }
+    });
+
+    /*notice..................................notice...........*/
+
+
+    /*notice.............noticed...........*/
+  </script>
 </body>
 </html>
-
 
